@@ -1,9 +1,0 @@
-name: Yeet
-main: com.stevekeef.yeet.Yeet
-version: 1.0
-api-version: 1.13
-commands:
-   yeet:
-      description: Yeeeeet
-      usage: /yeet
-      
