@@ -1,0 +1,22 @@
+name: Yeet
+main: stevekeef.yeet.main.Yeet
+version: 0.0.1-SNAPSHOT
+api-version: 1.13
+author: SteveKeef
+description: The player gets a reward for yeeting.
+permissions:
+      yeet.commands.yeet:
+        description: Allows yeet command
+        default: true
+      yeet.*:
+        description: Wildcard permission
+        default: false
+        children:
+          yeet.commands.yeet: true
+commands:
+   yeet:
+      description: Give a gloryrock
+      permission: yeet.commands.yeet
+      permission-message: You do not have permission!
+      usage: /yeet
+     
