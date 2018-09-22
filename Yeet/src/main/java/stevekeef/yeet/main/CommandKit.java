@@ -32,7 +32,7 @@ public class CommandKit implements CommandExecutor
             
             if (player.getInventory().contains(Material.DIAMOND) == false)
             {
-            	if (config.getString("player") != player.getUniqueId().toString())
+            	if (config.getString("player").equals(player.getUniqueId().toString()) == false)
             	{
 	            // Create a new ItemStack (type: diamond)
 	            ItemStack diamond = new ItemStack(Material.DIAMOND, 1);
@@ -40,7 +40,7 @@ public class CommandKit implements CommandExecutor
 	            // Give the player our items (comma-seperated list of all ItemStack)
 	            player.getInventory().addItem(diamond);
 	            
-	            // Add message
+	            // Send message
 	            player.sendMessage("Yeet!");
 	            
 	            // Player sound-effect
@@ -57,9 +57,13 @@ public class CommandKit implements CommandExecutor
             	}
             	else
             	{
-            		Bukkit.getConsoleSender().sendMessage("You've already yeeted!");
+            		player.sendMessage("You've already yeeted!");
             	}
             }
+            else
+        	{
+        		player.sendMessage("You are already flexing!");
+        	}
         }
     	else
     	{

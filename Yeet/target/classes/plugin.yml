@@ -18,5 +18,5 @@ commands:
       description: Give a gloryrock
       permission: yeet.commands.yeet
       permission-message: You do not have permission!
-      usage: /yeet
+      usage: /yeet requiredParam
      
