@@ -1,6 +1,7 @@
 package stevekeef.yeet.main;
 
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.Command;
@@ -24,11 +25,16 @@ public class CommandKit implements CommandExecutor
 	
 	            // Give the player our items (comma-seperated list of all ItemStack)
 	            player.getInventory().addItem(diamond);
+	            
+	            // Player sound-effect
+	            player.playSound(player.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1, 1);
             }
         }
     	else
     	{
+    		// Send error handling to the entity
     		sender.sendMessage("You have to be a player to yeet");
+    		
     		return false;
     	}
     	
