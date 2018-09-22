@@ -42,11 +42,11 @@ public class Yeet extends JavaPlugin
     
     private void createCustomConfig()
     {
-        customConfigFile = new File(getDataFolder(), "yeet.yml");
+        customConfigFile = new File(getDataFolder(), "custom.yml");
         if (!customConfigFile.exists())
         {
             customConfigFile.getParentFile().mkdirs();
-            saveResource("yeet.yml", false);
+            saveResource("custom.yml", false);
          }
 
         customConfig= new YamlConfiguration();

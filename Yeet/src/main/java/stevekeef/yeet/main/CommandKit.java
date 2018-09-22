@@ -32,7 +32,7 @@ public class CommandKit implements CommandExecutor
             
             if (player.getInventory().contains(Material.DIAMOND) == false)
             {
-            	if (config.contains(player.getUniqueId().toString()) == false)
+            	if (config.getString("player") != player.getUniqueId().toString())
             	{
 	            // Create a new ItemStack (type: diamond)
 	            ItemStack diamond = new ItemStack(Material.DIAMOND, 1);
@@ -44,9 +44,9 @@ public class CommandKit implements CommandExecutor
 	            player.sendMessage("Yeet!");
 	            
 	            // Player sound-effect
-	            player.playSound(player.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1, 1);
+	            player.playSound(player.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1, 1);
 	            
-	            config.set("Data.player", player.getUniqueId().toString());
+	            config.set("player", player.getUniqueId().toString());
 	            
 	            try {
 					config.save(customConfigFile);
