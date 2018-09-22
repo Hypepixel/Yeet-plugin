@@ -32,12 +32,12 @@ public class CommandKit implements CommandExecutor
             
             if (player.getInventory().contains(Material.DIAMOND) == false)
             {
-            	if (config.getString("player").equals(player.getUniqueId().toString()) == false)
+            	if (player.getUniqueId().toString().equals(config.getString("player")) == false)
             	{
 	            // Create a new ItemStack (type: diamond)
 	            ItemStack diamond = new ItemStack(Material.DIAMOND, 1);
 	
-	            // Give the player our items (comma-seperated list of all ItemStack)
+	            // Give the player our items (comma-separated list of all ItemStack)
 	            player.getInventory().addItem(diamond);
 	            
 	            // Send message
