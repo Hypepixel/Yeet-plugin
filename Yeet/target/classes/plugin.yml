@@ -1,6 +1,6 @@
 name: Yeet
 main: stevekeef.yeet.main.Yeet
-version: 1.0.0
+version: 0.0.2-SNAPSHOT
 api-version: 1.13
 author: SteveKeef
 description: The player gets a reward for yeeting.
