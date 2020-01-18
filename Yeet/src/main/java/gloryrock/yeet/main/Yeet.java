@@ -1,4 +1,4 @@
-package stevekeef.yeet.main;
+package gloryrock.yeet.main;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -24,11 +24,11 @@ public class Yeet extends JavaPlugin
     
     private void loadConfig()
     {
-    	getServer().getConsoleSender().sendMessage("Loading config");
+    	getServer().getConsoleSender().sendMessage("[YEET] Loading config");
     	
     	getConfig().options().copyDefaults(true);
     	saveConfig();
     	
-    	getServer().getConsoleSender().sendMessage("Loaded config");
+    	getServer().getConsoleSender().sendMessage("[YEET] Loaded config");
     }
 }

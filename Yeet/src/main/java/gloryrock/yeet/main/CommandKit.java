@@ -1,4 +1,4 @@
-package stevekeef.yeet.main;
+package gloryrock.yeet.main;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -41,10 +41,10 @@ public class CommandKit implements CommandExecutor
             	{
 					calendarLoaded.setTime(dateFormat.parse(plugin.getConfig().getString("users." + player.getUniqueId() + ".date")));
 				}
-            	catch (ParseException e)
+            	catch (ParseException exception)
             	{
-					e.printStackTrace();
-					Bukkit.getConsoleSender().sendMessage(ChatColor.RED + e.toString());
+            		exception.printStackTrace();
+					Bukkit.getConsoleSender().sendMessage(ChatColor.RED + exception.getMessage());
 				}
             	
 				int deltaHours = calendarNow.get(Calendar.HOUR) - calendarLoaded.get(Calendar.HOUR);
@@ -91,7 +91,7 @@ public class CommandKit implements CommandExecutor
     		Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "You need to be a player to yeet");
     	}
     	
-    	// If the player (or console) uses our command correct, we can return true
+    	// If the player (or console) uses our command correctly, we can return true
         return true;
     }
     
@@ -102,21 +102,21 @@ public class CommandKit implements CommandExecutor
         	case 0:
         		ItemStack iron = new ItemStack(Material.IRON_INGOT, 1);
         		player.getInventory().addItem(iron);
-        		player.sendMessage("Yeet!");
+        		player.sendMessage("YA YEET");
         		player.playSound(player.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1, 1);
         		Bukkit.broadcastMessage(player.getDisplayName() + " just flexed!");
         	break;
         	case 1:
         		ItemStack gold = new ItemStack(Material.GOLD_INGOT, 1);
 			   player.getInventory().addItem(gold);
-			   player.sendMessage("Yeet!");
+			   player.sendMessage("YA YEET");
 			   player.playSound(player.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1, 1);
 			   Bukkit.broadcastMessage(player.getDisplayName() + " just flexed!");
 		      break;
         	case 2:
         		ItemStack diamond = new ItemStack(Material.DIAMOND, 1);
 			   player.getInventory().addItem(diamond);
-			   player.sendMessage("Yeet!");
+			   player.sendMessage("YA YEET");
 			   player.playSound(player.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1, 1);
 			   Bukkit.broadcastMessage(player.getDisplayName() + " just flexed!");
 		      break;
