@@ -11,7 +11,6 @@ public class Yeet extends JavaPlugin
     	loadConfig();
     	
     	// Register our command "yeet" (set an instance of your command class as executor)
-    	getServer().getConsoleSender().sendMessage("Setting commands");
         this.getCommand("yeet").setExecutor(new CommandKit());
     }
     
@@ -24,11 +23,11 @@ public class Yeet extends JavaPlugin
     
     private void loadConfig()
     {
-    	getServer().getConsoleSender().sendMessage("[YEET] Loading config");
+    	getServer().getConsoleSender().sendMessage("[Yeet] Loading config");
     	
     	getConfig().options().copyDefaults(true);
     	saveConfig();
     	
-    	getServer().getConsoleSender().sendMessage("[YEET] Loaded config");
+    	getServer().getConsoleSender().sendMessage("[Yeet] Loaded config");
     }
 }
