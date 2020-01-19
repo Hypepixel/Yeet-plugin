@@ -1,6 +1,6 @@
 name: Yeet
 main: gloryrock.yeet.main.Yeet
-version: 1.0.0-SNAPSHOT
+version: 1.0.0
 api-version: 1.15
 author: Gloryrock
 description: The player gets a reward for yeeting.
