@@ -1,4 +1,4 @@
-package gloryrock.yeet.main;
+package hypepixel.yeet.main;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

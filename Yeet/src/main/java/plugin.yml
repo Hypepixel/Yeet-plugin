@@ -1,8 +1,8 @@
 name: Yeet
-main: gloryrock.yeet.main.Yeet
+main: hypepixel.yeet.main.Yeet
 version: 1.0.0
 api-version: 1.15
-author: Gloryrock
+author: Hypepixel
 description: The player gets a reward for yeeting.
 permissions:
       yeet.commands.yeet:
@@ -15,7 +15,7 @@ permissions:
           yeet.commands.yeet: true
 commands:
    yeet:
-      description: Give a gloryrock
+      description: Give a diamond
       permission: yeet.commands.yeet
       permission-message: You do not have permission!
       usage: /yeet
